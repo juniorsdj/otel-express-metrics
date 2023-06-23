@@ -25,6 +25,5 @@
       "name": "main"
     }
   ],
-  "type": "git",
-  "url": "git@github.com:juniorsdj/otel-express-metrics"
+  "repositoryUrl": "https://github.com/juniorsdj/otel-express-metrics.git"
 }
