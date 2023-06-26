@@ -1,6 +1,6 @@
 {
   "name": "otel-express-metrics",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./lib/index.js",
   "repository": "git@github.com:juniorsdj/otel-express-metrics.git",
   "author": "Jennysson Junior <jddsjr98@gmail.com>",
