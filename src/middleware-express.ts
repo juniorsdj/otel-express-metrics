@@ -1,20 +1,21 @@
 import { hrtime } from "node:process";
-
+const SERVICE_NAME = process.env.SERVICE_NAME;
 import { metrics, ValueType } from "@opentelemetry/api";
 import { NextFunction, Request, Response } from "express";
 import UrlValueParser from "url-value-parser";
 
 const urlValueParser = new UrlValueParser();
-const myMeter = metrics.getMeter("my-service-meter");
+const myMeter = metrics.getMeter(SERVICE_NAME || "my-service-meter");
+const prefix = SERVICE_NAME ? `${SERVICE_NAME}_` : "";
 
-function requestCountGenerator(prefix = "") {
+function requestCountGenerator() {
   return myMeter.createCounter(`${prefix}http_requests_total`, {
     description: "Counter for total requests received",
     valueType: ValueType.INT,
   });
 }
 
-function requestDurationGenerator(prefix = "") {
+function requestDurationGenerator() {
   return myMeter.createHistogram(`${prefix}http_request_duration_seconds`, {
     description: "Duration of HTTP requests in seconds",
     unit: "ms",
