@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/juniorsdj/otel-express-metrics/compare/v1.0.1...v1.1.0) (2023-07-24)
+
+
+### Features
+
+* change url to use req.path instead req.originalUrl ([b81e0f5](https://github.com/juniorsdj/otel-express-metrics/commit/b81e0f5815f96649cb7f5c916d97fad237f94a6b))
+
 ## [1.0.1](https://github.com/juniorsdj/otel-express-metrics/compare/v1.0.0...v1.0.1) (2023-06-26)
 
 
