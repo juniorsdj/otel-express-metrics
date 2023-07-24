@@ -22,7 +22,7 @@ function requestDurationGenerator() {
 }
 
 function normalizePath(req: Request) {
-  return urlValueParser.replacePathValues(req.originalUrl, "#val");
+  return urlValueParser.replacePathValues(req.path, "#val");
 }
 
 const requestCounter = requestCountGenerator();
